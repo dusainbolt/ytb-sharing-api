@@ -1,8 +1,8 @@
 /* eslint-disable @typescript-eslint/no-var-requires */
 import "reflect-metadata";
 import { DataSource } from "typeorm";
-import { User } from "../entity/User";
-import { Video } from "../entity/Video";
+import { User } from "../entity/User.entity";
+import { Video } from "../entity/Video.entity";
 const dotenv = require("dotenv");
 
 dotenv.config();

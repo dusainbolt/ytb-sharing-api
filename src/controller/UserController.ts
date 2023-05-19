@@ -1,4 +1,4 @@
-import { User } from "../entity/User";
+import { User } from "../entity/User.entity";
 import { Hash } from "../utils/hash";
 import { Rp } from "../utils/response";
 
@@ -12,7 +12,7 @@ export class UserController {
             }
             const password = await Hash.bcrypt(req.body.password);
             const user = await User.save({ username, password });
-            return Rp.ok(res, user);
+            return Rp.ok(res, user, 201);
         } catch (err) {
             return Rp.exception(res, err);
         }
@@ -23,7 +23,7 @@ export class UserController {
             const { username, password } = req.body;
             const user = await User.findOneBy({ username });
             if (!user) {
-                return Rp.error(res, `${username} isn't already exist`);
+                return Rp.error(res, `${username} is not already exist`);
             }
 
             if (!(await Hash.compareBcrypt(password, user.password))) {

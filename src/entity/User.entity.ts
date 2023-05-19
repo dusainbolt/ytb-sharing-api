@@ -1,6 +1,6 @@
 import { Column, Entity, OneToMany, PrimaryGeneratedColumn } from "typeorm";
 import { AbstractEntity } from "./AbstractEntity";
-import { Video } from "./Video";
+import { Video } from "./Video.entity";
 
 export const USER_ENTITY = `user`;
 @Entity(USER_ENTITY)

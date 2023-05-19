@@ -1,4 +1,4 @@
-import { User } from "../entity/User";
+import { User } from "../entity/User.entity";
 
 /* eslint-disable @typescript-eslint/no-var-requires */
 const bcrypt = require("bcrypt");

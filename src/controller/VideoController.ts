@@ -1,5 +1,5 @@
 /* eslint-disable no-useless-escape */
-import { Video } from "../entity/Video";
+import { Video } from "../entity/Video.entity";
 import { Rp } from "../utils/response";
 
 export class VideoController {

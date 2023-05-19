@@ -23,6 +23,7 @@
         "@types/mocha": "^10.0.0",
         "@types/node": "^18.16.12",
         "@types/sinon": "^10.0.13",
+        "@types/supertest": "^2.0.12",
         "@typescript-eslint/eslint-plugin": "^5.42.1",
         "@typescript-eslint/parser": "^5.42.1",
         "chai": "^4.3.7",
@@ -42,6 +43,8 @@
         "jsonwebtoken": "^9.0.0",
         "pg": "^8.11.0",
         "reflect-metadata": "^0.1.13",
+        "sql.js": "^1.8.0",
+        "supertest": "^6.3.3",
         "typeorm": "^0.3.16"
     }
 }

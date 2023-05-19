@@ -1,5 +1,5 @@
 import { Column, Entity, JoinColumn, ManyToOne, PrimaryGeneratedColumn } from "typeorm";
-import { User } from "./User";
+import { User } from "./User.entity";
 import { AbstractEntity } from "./AbstractEntity";
 
 export const VIDEO_ENTITY = `video`;
