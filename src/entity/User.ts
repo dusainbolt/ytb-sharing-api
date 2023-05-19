@@ -1,7 +1,10 @@
-import { Entity, PrimaryGeneratedColumn, Column } from "typeorm";
+import { Column, Entity, OneToMany, PrimaryGeneratedColumn } from "typeorm";
+import { AbstractEntity } from "./AbstractEntity";
+import { Video } from "./Video";
 
-@Entity()
-export class User {
+export const USER_ENTITY = `user`;
+@Entity(USER_ENTITY)
+export class User extends AbstractEntity {
     @PrimaryGeneratedColumn({ type: "int" })
     id: number;
 
@@ -10,4 +13,7 @@ export class User {
 
     @Column()
     password: string;
+
+    @OneToMany(() => Video, (video) => video.owner)
+    videos?: Video[];
 }
